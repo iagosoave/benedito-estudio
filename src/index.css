@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@layer utilities {
+    .animate-gradient-x {
+      background-size: 200% 200%;
+      animation: gradient-x 8s ease infinite;
+    }
+  
+    @keyframes gradient-x {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  }
+  
+  /* Para eliminar barras de rolagem em certos navegadores */
+  html {
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Opera */
+  }
+  
+  /* Estilos para animações suaves de scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Fonte opcional (descomente e substitua pela fonte de sua preferência) */
+  /* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap'); */
+  
+  /* body {
+    font-family: 'Space Grotesk', sans-serif;
+  } */
