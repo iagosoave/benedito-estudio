@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Play, Pause, Menu } from 'lucide-react';
+import { ChevronDown, Play, Pause } from 'lucide-react';
 import trailerVideo from './trailer.mp4';
 import logo from './logo.png';
 
@@ -61,13 +61,7 @@ const Hero = () => {
       </div>
 
       {/* Header móvel responsivo */}
-      <div className="absolute top-0 left-0 right-0 z-10 flex justify-between items-center p-4 md:p-6">
-        <div className="md:hidden">
-          <button className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20 text-white/90">
-            <Menu size={20} />
-          </button>
-        </div>
-        
+      <div className="absolute top-0 left-0 right-0 z-10 flex justify-end items-center p-4 md:p-6">
         {/* Controle de vídeo - reposicionado */}
         <div className="md:absolute md:top-8 md:right-8">
           <motion.button
@@ -82,7 +76,7 @@ const Hero = () => {
       </div>
 
       {/* Conteúdo centralizado */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 text-center">
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 text-center pt-16">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -153,7 +147,7 @@ const Hero = () => {
           
           {/* Palavras-chave - versão responsiva */}
           <motion.div 
-            className="hidden sm:flex justify-center space-x-6 text-sm tracking-widest opacity-70 font-light"
+            className="hidden sm:flex justify-center space-x-6 text-sm tracking-widest opacity-70 font-light mb-20"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 2.2 }}
@@ -167,7 +161,7 @@ const Hero = () => {
           
           {/* Palavras-chave - versão mobile */}
           <motion.div 
-            className="flex flex-col sm:hidden space-y-1 text-xs tracking-widest opacity-70 font-light"
+            className="flex flex-col sm:hidden space-y-1 text-xs tracking-widest opacity-70 font-light mb-8"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 2.2 }}
@@ -189,7 +183,7 @@ const Hero = () => {
             y: showScrollIndicator ? 0 : 20
           }}
           transition={{ duration: 0.5 }}
-          className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center"
+          className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center"
         >
           <span className="text-xs text-white/60 mb-2 tracking-widest font-light">DESCUBRA</span>
           <motion.div
